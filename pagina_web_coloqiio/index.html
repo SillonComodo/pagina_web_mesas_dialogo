@@ -173,7 +173,7 @@
       margin-bottom: 2rem;
     }
 
-    #introduccion>h2 {
+    #introcion>h2 {
       text-shadow: 0 0 14px var(--bg);
     }
 
@@ -789,7 +789,7 @@
       text-shadow: none;
     }
 
-    #introduccion>h2 {
+    #introcion>h2 {
       text-shadow: none;
       align-self: start;
       justify-self: start;
@@ -822,7 +822,7 @@
       border-color: #fff;
     }
 
-    /* ===== v5: introducción, invitación, espacio final de mesas ===== */
+    /* ===== v5: introción, invitación, espacio final de mesas ===== */
     .part {
       overflow-x: clip;
     }
@@ -833,16 +833,16 @@
       mask-image: linear-gradient(to right, transparent, #000 2.4rem, #000 calc(100% - 2.4rem), transparent), linear-gradient(to bottom, transparent, #000 1.6rem, #000 calc(100% - 1.6rem), transparent);
     }
 
-    #introduccion {
+    #introcion {
       padding-block: 2rem;
       align-items: center;
     }
 
-    #introduccion .lead {
+    #introcion .lead {
       font-size: 1.1rem;
     }
 
-    #introduccion .prose p:last-child {
+    #introcion .prose p:last-child {
       margin-bottom: 0;
     }
 
@@ -1020,11 +1020,11 @@
         gap: 1rem;
       }
 
-      #introduccion {
+      #introcion {
         padding-block: 1.4rem;
       }
 
-      #introduccion .lead {
+      #introcion .lead {
         font-size: 1.04rem;
       }
 
@@ -1091,7 +1091,7 @@
         <img class="nav-logo" src="Uaem_Morelos_logo.png" alt="Universidad Autónoma del Estado de Morelos">
         <nav aria-label="Principal">
           <ul>
-            <li><a href="#introduccion">Introducción</a></li>
+            <li><a href="#introcion">introción</a></li>
             <li><a href="#mesas">Mesas</a></li>
             <li><a href="#registro">Registro</a></li>
             <li><a href="#quienes-somos">Quiénes somos</a></li>
@@ -1104,7 +1104,7 @@
 
   <main id="contenido">
 
-    <!-- ============ ZONA OSCURA: PORTADA + INTRODUCCIÓN (mismo fondo) ============ -->
+    <!-- ============ ZONA OSCURA: PORTADA + introCIÓN (mismo fondo) ============ -->
     <div class="studio-wrap" aria-hidden="true"><canvas class="studio"></canvas></div>
     <div class="tablet-screen" aria-hidden="true"></div>
     <div class="header-shade" aria-hidden="true"></div>
@@ -1121,10 +1121,10 @@
         </section>
       </div>
 
-      <!-- PARTE 2: INTRODUCCIÓN -->
+      <!-- PARTE 2: introCIÓN -->
       <section class="part" id="parte-intro">
-        <div class="section wrap split" id="introduccion">
-          <h2 class="glass" style="font-size: 35px;">Introducción</h2>
+        <div class="section wrap split" id="introcion">
+          <h2 class="glass" style="font-size: 35px;">introción</h2>
           <div class="prose glass tall">
             <p class="lead">
               En los últimos años, la Inteligencia Artificial (IA) ha cambiado de
@@ -1143,13 +1143,6 @@
               definir nuestra perspectiva y plantear propuestas. Creemos que es
               nuestra responsabilidad ponernos en el centro del debate como
               protagonistas que nos toca ser.
-
-              Nosotros como estudiantes de la Licenciatura en Inteligencia
-              Artificial de la UAEM consideramos importante generar foros de
-              discusión sobre estos temas. Por su impacto en cada ámbito de la vida y
-              en el conocimiento humano, consideramos fundamental convocar a otras
-              áreas del conocimiento a dialogar e involucrarse en generar discusión
-              acerca de esta nueva relación Humano-IA.
   
             </p>
           </div>
@@ -1158,10 +1151,12 @@
           <h2 class="glass" style="font-size: 23px;">Quiénes somos</h2>
           <div class="prose glass tall">
             <p>
-              Nosotros como estudiantes de la Licenciatura en Inteligencia Artificial de la UAEM consideramos importante
-              generar foros de discusión de estos temas. Por su impacto en cada ámbito de la vida y en el
-              conocimiento humano, consideramos fundamental convocar a otras áreas del conocimiento a dialogar e
-              involucrarse en generar discusión acerca de esta nueva relación Humano-IA.
+              Nosotros como estudiantes de la Licenciatura en Inteligencia
+              Artificial de la UAEM consideramos importante generar foros de
+              discusión sobre estos temas. Por su impacto en cada ámbito de la vida y
+              en el conocimiento humano, consideramos fundamental convocar a otras
+              áreas del conocimiento a dialogar e involucrarse en generar discusión
+              acerca de esta nueva relación Humano-IA.
             </p>
 
           </div>
@@ -2128,7 +2123,7 @@ void main() {
           if (Math.abs(scrollY - sy) < .3) sy = scrollY;
           measure();
           const a = sine(clamp(sy / sI, 0, 1));
-          // the flight to the wall starts only once the end of the introduction is on screen (it can be taller than a phone)
+          // the flight to the wall starts only once the end of the introtion is on screen (it can be taller than a phone)
           const sA = Math.max(sI, sM - H);
           const cr = clamp((sy - sA) / (sM - sA), 0, 1), c = sine(cr);
           ptr.sx += (ptr.x - ptr.sx) * .04; ptr.sy += (ptr.y - ptr.sy) * .04;
@@ -2276,8 +2271,8 @@ void main() {
 
       /* ===== 4. SCROLL REVEALS ===== */
       const tag = (el, mode, i = 0) => { if (el) { el.dataset.reveal = mode || "up"; el.style.setProperty("--i", i); } };
-      tag(document.querySelector("#introduccion > h2"), "up", 0);
-      document.querySelectorAll("#introduccion .prose > *").forEach((el, i) => tag(el, "up", i + 1));
+      tag(document.querySelector("#introcion > h2"), "up", 0);
+      document.querySelectorAll("#introcion .prose > *").forEach((el, i) => tag(el, "up", i + 1));
       tag(document.querySelector("#mesas .section-title"), "up", 0);
       document.querySelectorAll(".mesa").forEach(m => {
         tag(m.querySelector(".media"), m.classList.contains("reverse") ? "right" : "left", 0);
@@ -2299,7 +2294,7 @@ void main() {
       const parts = [...document.querySelectorAll(".part")];
       const nav = document.createElement("nav");
       nav.className = "dots"; nav.setAttribute("aria-label", "Secciones");
-      const names = ["Inicio", "Introducción", "Mesas", "Registro"];
+      const names = ["Inicio", "introción", "Mesas", "Registro"];
       const btns = parts.map((p, i) => {
         const b = document.createElement("button");
         b.type = "button"; b.title = names[i] || "Parte " + (i + 1); b.setAttribute("aria-label", b.title);
