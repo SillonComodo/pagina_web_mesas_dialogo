@@ -173,7 +173,7 @@
       margin-bottom: 2rem;
     }
 
-    #introcion>h2 {
+    #introduccion>h2 {
       text-shadow: 0 0 14px var(--bg);
     }
 
@@ -789,7 +789,7 @@
       text-shadow: none;
     }
 
-    #introcion>h2 {
+    #introduccion>h2 {
       text-shadow: none;
       align-self: start;
       justify-self: start;
@@ -833,16 +833,16 @@
       mask-image: linear-gradient(to right, transparent, #000 2.4rem, #000 calc(100% - 2.4rem), transparent), linear-gradient(to bottom, transparent, #000 1.6rem, #000 calc(100% - 1.6rem), transparent);
     }
 
-    #introcion {
+    #introduccion {
       padding-block: 2rem;
       align-items: center;
     }
 
-    #introcion .lead {
+    #introduccion .lead {
       font-size: 1.1rem;
     }
 
-    #introcion .prose p:last-child {
+    #introduccion .prose p:last-child {
       margin-bottom: 0;
     }
 
@@ -1020,11 +1020,11 @@
         gap: 1rem;
       }
 
-      #introcion {
+      #introduccion {
         padding-block: 1.4rem;
       }
 
-      #introcion .lead {
+      #introduccion .lead {
         font-size: 1.04rem;
       }
 
@@ -1091,7 +1091,7 @@
         <img class="nav-logo" src="Uaem_Morelos_logo.png" alt="Universidad Autónoma del Estado de Morelos">
         <nav aria-label="Principal">
           <ul>
-            <li><a href="#introcion">introción</a></li>
+            <li><a href="#introduccion">introción</a></li>
             <li><a href="#mesas">Mesas</a></li>
             <li><a href="#registro">Registro</a></li>
             <li><a href="#quienes-somos">Quiénes somos</a></li>
@@ -1121,10 +1121,10 @@
         </section>
       </div>
 
-      <!-- PARTE 2: introDUCCIÓN -->
+      <!-- PARTE 2: INTRODUCCIÓN -->
       <section class="part" id="parte-intro">
-        <div class="section wrap split" id="introcion">
-          <h2 class="glass" style="font-size: 35px;">introción</h2>
+        <div class="section wrap split" id="introduccion">
+          <h2 class="glass" style="font-size: 35px;">Introducción</h2>
           <div class="prose glass tall">
             <p class="lead">
               En los últimos años, la Inteligencia Artificial (IA) ha cambiado de
@@ -2271,8 +2271,8 @@ void main() {
 
       /* ===== 4. SCROLL REVEALS ===== */
       const tag = (el, mode, i = 0) => { if (el) { el.dataset.reveal = mode || "up"; el.style.setProperty("--i", i); } };
-      tag(document.querySelector("#introcion > h2"), "up", 0);
-      document.querySelectorAll("#introcion .prose > *").forEach((el, i) => tag(el, "up", i + 1));
+      tag(document.querySelector("#introduccion > h2"), "up", 0);
+      document.querySelectorAll("#introduccion .prose > *").forEach((el, i) => tag(el, "up", i + 1));
       tag(document.querySelector("#mesas .section-title"), "up", 0);
       document.querySelectorAll(".mesa").forEach(m => {
         tag(m.querySelector(".media"), m.classList.contains("reverse") ? "right" : "left", 0);
