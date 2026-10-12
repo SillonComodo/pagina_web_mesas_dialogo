@@ -1121,7 +1121,7 @@
         </section>
       </div>
 
-      <!-- PARTE 2: introCIÓN -->
+      <!-- PARTE 2: introDUCCIÓN -->
       <section class="part" id="parte-intro">
         <div class="section wrap split" id="introcion">
           <h2 class="glass" style="font-size: 35px;">introción</h2>
@@ -2010,8 +2010,8 @@ void main() {
       (() => {
         const cv = document.querySelector("canvas.studio"), wrap = cv && cv.parentElement;
         const z1 = document.querySelector(".zona-oscura"), tz = document.querySelector(".tablet-zone");
-        const pIntro = document.querySelector("#parte-intro"), pMesas = document.querySelector("#parte-2");
-        if (!cv || !z1 || !tz || !pIntro || !pMesas || !window.THREE || typeof createStudioPointCloud !== "function") return;
+        const pintro = document.querySelector("#parte-intro"), pMesas = document.querySelector("#parte-2");
+        if (!cv || !z1 || !tz || !pintro || !pMesas || !window.THREE || typeof createStudioPointCloud !== "function") return;
         let renderer;
         try { renderer = new THREE.WebGLRenderer({ canvas: cv, antialias: false, powerPreference: "high-performance" }); }
         catch (e) { console.warn("WebGL unavailable", e); return; }
@@ -2091,7 +2091,7 @@ void main() {
         let sy = scrollY, sI = 1, sM = 2;
         const measure = () => {
           const y = scrollY;
-          sI = Math.max(1, pIntro.getBoundingClientRect().top + y - top);
+          sI = Math.max(1, pintro.getBoundingClientRect().top + y - top);
           sM = Math.max(sI + 1, pMesas.getBoundingClientRect().top + y - top);
         };
         const ptr = { x: 0, y: 0, sx: 0, sy: 0 };
