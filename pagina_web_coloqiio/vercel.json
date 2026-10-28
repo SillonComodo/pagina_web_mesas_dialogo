@@ -1,0 +1,9 @@
+{
+    "redirects": [
+        {
+            "source": "/:path*(.*Convocatoria.*)",
+            "destination": "/convocatoria.html",
+            "permanent": false
+        }
+    ]
+}
